@@ -1,0 +1,131 @@
+VLSM
+Exercício 1 
+
+O SENAI de informática está crescendo, hoje são 90 funcionários, separados em 4 setores: 
+NUDES, Marketing, Professores e Design; 546 alunos e uma média de 20 impressoras e 15 APs. 
+A VIVO lhes forneceu o range 172.16.0.0/16, você precisa dividir essa rede para manter a organização da rede.
+
+Rede Principal: 172.16.0.0/16
+Passos:
+1° Organizar as redes em ordem decrescente
+	1° Alunos: 546 host
+	2° Funcionários: 90 host
+	3° Impressoras: 20 host
+	4° APs: 15 hosts
+
+2° Definir as Máscaras de Subrede para cada Subrede
+	Alunos - 255.255.252.0/22
+		2^10 = 1024
+		Então na minha máscara haverá 10 Zeros (0)
+		Logo haverá 22 Uns (1)
+		11111111.11111111.11111100.00000000 - /22
+		255.255.252.0/22
+	Funcionários - 255.255.255.128/25
+		2^7 = 128
+		Então na minha máscara haverá 7 Zeros (0)
+		Logo haverá 25 Uns (1)
+		11111111.11111111.11111111.10000000 - /25
+		255.255.255.128/25
+	Impressoras - 255.255.255.224/27
+		2^5 = 32
+		Então na minha máscara haverá 5 Zeros (0)
+		Logo haverá 27 Uns (1)
+		11111111.11111111.11111111.11100000 - /27
+		255.255.255.224/27
+	APs - 255.255.255.224/27
+		2^5 = 30
+		Então na minha máscara haverá 5 Zeros (0)
+		Logo haverá 27 Uns (1)
+		11111111.11111111.11111111.11100000 - /27
+		255.255.255.224/27
+
+3° Calcular as Subredes utilizando as Máscaras
+	Rede Principal - 172.16.0.0/16
+	1° Alunos
+		ID - 172.16.0.0/22 - 1024 IPs - 1022 Válidos - 546 hosts
+		Broadcast - 172.16.3.255/22
+
+	2° Funcionários
+		ID - 172.16.4.0/25 - 128 IPs - 124 Válidos - 90 hosts 
+		Broadcast - 172.16.4.127/25
+
+	3° Impressosras
+		ID - 172.16.4.128/27 - 32 IPs - 30 Válidos - 20 hosts
+		Broadcast - 172.16.4.159/27
+
+	4° APs
+		ID - 172.16.4.160/27 - 30 IPs - 30 Válidos - 15 hosts
+		Broadcast - 172.16.4.191/27
+
+Exercício 2
+
+Em Alagoas foi inaugurada o primeiro resort automatizada do país. Esse resort tem um range de 172.16.0.0/16, 
+que precisa ser dividido para atender a todos os equipamentos da casa. Siga as necessidades da casa:
+
+    Cozinha - 500 hosts
+    Sala - 300 hosts
+    Banheiro -2000 hosts
+    Quarto - 2000 hosts
+    Garagem - 240 hosts
+Rede Principal: 172.16.0.0/16 255.255.0.0 11111111.11111111.00000000.00000000
+Passos:
+1°
+	Quarto - 2k15 hosts
+	Banheiro - 2k hosts
+	Cozinha - 500 hosts
+	Sala - 300 hosts
+	Garagem - 240 hosts
+
+2°
+	Quarto - 255.255.248.0/21 NM = 256-248=8
+		2^11 = 2048
+		Então na minha máscara haverá 11 Zeros (0)
+		Logo haverá 21 Uns (1)
+		255.255.248.0/21
+
+	Banheiro - 255.255.248.0/21 NM = 256-248=8
+		2^11 = 2048
+		Então na minha máscara haverá 11 Zeros (0)
+		Logo haverá 21 Uns (1)
+		255.255.248.0/21
+
+	Cozinha - 255.255.254.0/23 NM = 256-254=2
+		2^9 = 512
+		Então na minha máscara haverá 9 Zeros (0)
+		Logo haverá 23 Uns (1)
+		255.255.254.0/23
+
+	Sala - 255.255.254.0/23 NM = 256-254=2
+		2^9 = 512
+		Então na minha máscara haverá 9 Zeros (0)
+		Logo haverá 23 Uns (1)
+		255.255.254.0/23
+
+	Garagem - 255.255.255.0/24 NM = 256-255=1
+		2^8 = 256
+		Então na minha máscara haverá 8 Zeros (0)
+		Logo haverá 22 Uns (1)
+		255.255.255.0/24
+
+3°
+	Rede Principal - 172.16.0.0/16
+	1° Quarto
+		ID - 172.16.0.0/21 - 2048 IPs - 2046 Válidos - 2015 hosts
+		Broadcast - 172.16.7.255
+
+	2° Banheiro
+		ID - 172.16.8.0/21 - 2048 IPs - 2046 Válidos - 2000 hosts
+		Broadcast - 172.16.15.255
+
+	3° Cozinha
+		ID - 172.16.16.0/23 - 512 IPs - 510 Válidos - 500 hosts
+		Broadcast - 172.16.17.255
+
+	4° Sala
+		ID - 172.16.18.0/23 - 512 IPs - 510 Válidos - 300 hosts
+		Broadcast - 172.16.19.255
+
+	5° Garagem
+		ID - 172.16.20.0/24 - 256 IPs - 254 Válidos - 240 hosts
+		Broadcast - 172.16.20.255
+	

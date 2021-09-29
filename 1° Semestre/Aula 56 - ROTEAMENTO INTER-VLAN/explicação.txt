@@ -1,0 +1,9 @@
+Roteamento Legacy
+Sistema não mais utilizado
+nele cada porta de rede seria disponibilizado para uma vlan
+assim seria muito caro de implementar quando precisace de mais de 2 ou 3
+vlans
+Rounter-on-a-Stick
+Substitui o modelo Legacy
+Nele utilizasse apenas um cabo, mas sim várias interfaces virtuais
+podendo assim criar interfaces diferentes com vlans diferentes

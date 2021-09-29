@@ -1,0 +1,4 @@
+acessar telnet via cmd
+telnet <ip>
+
+equip. cisco precisa de vty e senha na enable. Para configurar telnet e SSH.

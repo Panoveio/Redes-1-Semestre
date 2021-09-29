@@ -1,0 +1,67 @@
+!Script de configuração do pka da aula 50
+!Este pka é sobre vlan no modo access
+
+!S1
+en
+conf t
+vlan 10
+name Faculty/Staff
+vlan 20
+name Students
+vlan 30
+name Guest(Default)
+vlan 99
+name Management&Native
+vlan 150
+name VOICE
+
+!S2
+en
+conf t
+vlan 10
+name Faculty/Staff
+vlan 20
+name Students
+vlan 30
+name Guest(Default)
+vlan 99
+name Management&Native
+vlan 150
+name VOICE
+exit
+interface f0/11
+switchport mode access
+switchport access vlan 10
+interface f0/18
+switchport mode access
+switchport access vlan 20
+interface f0/6
+switchport mode access
+switchport access vlan 30
+
+!S3
+en
+conf t
+vlan 10
+name Faculty/Staff
+vlan 20
+name Students
+vlan 30
+name Guest(Default)
+vlan 99
+name Management&Native
+vlan 150
+name VOICE
+exit
+interface f0/11
+switchport mode access
+switchport access vlan 10
+interface f0/18
+switchport mode access
+switchport access vlan 20
+interface f0/6
+switchport mode access
+switchport access vlan 30
+interface f0/11
+mls qos trust cos
+switchport voice vlan 150

@@ -1,0 +1,14 @@
+193.128.0.0/24	255.255.255.0
+	Alphaville - 120 hosts
+	Bauru - 50 hosts
+	Cotia - 30 hosts
+	Campinas - 14 hosts
+
+Alphaville	193.128.0.0/25		255.255.255.128 - 128 IPs
+Bauru		193.128.0.128/26	255.255.255.192 - 64 IPs
+Cotia		193.128.0.192/27	255.255.255.224 - 32 IPs
+Campinas	193.128.0.224/28	255.255.255.240 - 16 IPs
+
+214 hosts necessitados
+240 IPs utilizados
+15 IPs restantes

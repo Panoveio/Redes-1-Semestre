@@ -1,0 +1,12 @@
+enable
+configure terminal
+ip domain-name info.local
+crypto key generate rsa general-keys modulus 1024
+username vinicius privilege 15 secret Senha*Segura
+username estagiario privilege 1 secret Senha*Estagiario
+line vty 0 15
+transport input ssh
+login local
+line console 0
+login local
+do wr

@@ -1,0 +1,36 @@
+VLAN 10 - 2001:db8:cafe:10::/64
+    PC-ALUNOS1 - 2001:db8:cafe:10::a/64
+                 fe80::a
+    PC-ALUNOS2 - 2001:db8:cafe:10::14/64
+                 fe80::14
+
+    RT-01 - G0/0.10 - 2001:db8:cafe:10::1/64
+                      fe80::1
+
+VLAN 20 - 2001:db8:cafe:20::f64
+    PC-PROF1 - 2001:db8:cafe:20::f/64
+               fe80::f
+    PC-PROF2 - 2001:db8:cafe:20::19/64
+               fe80::19
+
+    RT-01 - G0/0.20 - 2001:db8:cafe:20::1/64
+                      fe80::1
+
+VLAN 30 - 2001:db8:cafe:30::/64
+    PC-COORD1 - 2001:db8:cafe:30::1e/64
+                fe80::1e
+    PC-COORD2 - 2001:db8:cafe:30::28/64
+                fe80::28
+
+    RT-01 - G0/0.30 - 2001:db8:cafe:30::1/64
+                      fe80::1
+
+VLAN 10 - 2001:db8:faca::/64
+    PC-ALUNOS1-SC - 2001:db8:faca:10::32/64
+                    fe80::32
+VLAN 20 - 2001:db8:faca::/64
+    PC-PROF1-SC - 2001:db8:faca:20::3c/64
+                  fe80::3c
+VLAN 30 - 2001:db8:faca::/64
+    PC-COORD1-SC - 2001:db8:faca:20::64/64
+                   fe80::64

@@ -1,0 +1,8 @@
+Rota padrão = um  último recurso, caso o seu roteador não saiba a rota de destino
+ele automáticamente pede pra outro roteador achar a rota
+
+configuração no roteador
+
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 <ip-de-quem-conhece>

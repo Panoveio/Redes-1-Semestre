@@ -1,0 +1,78 @@
+Rede Principal - 192.168.0.0/24
+1° Separando em ordem decrescente
+Rede 3 Verde       112 hosts
+Rede 2 Azul        53  hosts
+Rede 1 Amarelo     27  hosts
+Rede 4 Vermelho    4   hosts
+
+2° Definindo qual é a máscara para cada bloco
+    Verde - 255.255.255.128/25 NM = 256-128=128
+        2^7 = 128
+        255.255.255.128/25
+    
+    Azul - 255.255.255.192/24 NM = 256-192=64
+        2^6 = 64
+        255.255.255.192/26
+    
+    Amarelo - 255.255.255.224/27 NM = 256-224=32
+        2^5 = 32
+        255.255.255.224/27
+
+    Vermelho - 255.255.255.248/29 NM = 256-248=8
+        2^3 = 8
+        255.255.255.248/29
+
+3° Calcular as Subredes utilizando as Máscaras
+    Rede Principal - 192.168.0.0/24
+    1° Verde
+        ID - 192.168.0.0/25 - 128 IPs - 126 Válidos - 112 hosts
+        Broadcast - 192.168.0.127/25
+        Range: 192.168.0.1 - 192.168.0.126
+
+    2° Azul
+        ID - 192.168.0.128/26 - 64 IPs - 62 Válidos - 53 hosts
+        Broadcast - 192.168.0.191/26
+        Range: 192.168.0.129 - 192.168.0.190
+    
+    3° Amarelo
+        ID - 192.168.0.192/27 - 32 IPs - 30 Válidos - 24 hosts
+        Broadcast - 192.168.0.223
+        Range: 192.168.0.193 - 192.168.0.222
+
+    4° Vermelho
+        ID - 192.168.0.224/29 - 8 IPs - 6 Válidos - 4 hosts
+        Broadcast - 192.168.0.231
+        Range: 192.168.0.225 - 192.168.0.230
+
+    Próximo ID - 192.168.0.232/?
+
+!Script para o programa
+
+!Script dos Switches
+
+!Script do Roteador
+enable
+    configure terminal
+        hostname RT-01
+
+        !Interface da Rede 3 (Verde)
+        interface g3/0
+        ip address 192.168.0.1 255.255.255.128
+        no shutdown
+
+        !Interface da Rede 2 (Azul)
+        interface g1/0
+        ip address 192.168.0.129 255.255.255.192
+        no shutdown
+
+        !Interface da Rede 1 (Amarelo)
+        interface g0/0
+        ip address 192.168.0.193 255.255.255.224
+        no shutdown
+
+        !Interface da Rede 4 (Vermelho)
+        interface g3/0
+        ip address 192.168.0.225 255.255.255.248
+        no shutdown
+        end
+wr

@@ -1,0 +1,18 @@
+Documentação
+RH - 192.168.0.0/24 [C]
+	Máscara: 255.255.255.0
+	ID da Rede: 192.168.0.0
+		1° IP Válido: 192.168.0.1
+		Últ. IP Válido: 192.168.0.254
+	Broadcast: 192.168.0.255
+	Qtds. de IPs: 256
+	Qtds. de IPs Válidos: 254
+
+ADM - 172.16.0.0/16 [B]
+	Máscara: 255.255.0.0
+	ID da Rede: 172.16.0.0
+		1° IP Válido: 172.16.0.1
+		Últ. IP Válido: 172.16.255.254
+	Broadcast: 172.16.255.255
+	Qtds. de IPs: 65536
+	Qtds. de IPs Válidos: 65534
