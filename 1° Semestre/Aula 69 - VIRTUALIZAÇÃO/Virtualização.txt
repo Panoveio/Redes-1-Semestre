@@ -1,0 +1,39 @@
+Virtualização
+
+Método que permite dividir um computador físico em vários virtuais
+
+Tipos de Virtualização
+
+Hypervisor - Virtualizadores
+
+    Tipo 1 - Não precisa de um sistema operacional
+        Ele utiliza um próprio OS de virtualização, não precisando de um OS CORE (Windows, Linux ect.) para ser utilizado.
+    Tipo 2 - Precisa de sistema operacional
+
+Conexão de Redes
+
+3 Modos
+    HOST-ONLY - Rede fechada
+        Criar uma rede interna, usando um switch interno, apenas VM e PC podem se conectar
+    
+BRIDGE
+    Consegue acessar a internet
+    Conecta o vSW direto no roteador da casa, permitindo acesso direto a rede externa (fora do VM)
+    Situação: 
+
+NAT
+    Consegue acessar a internet
+    Ele permite o acesso a internet, e protege de ter acesso a VM através do firewall
+    
+
+VDI - Padrão do Virtualbox
+
+VHD - Padrão Aberto
+
+VMDK - Padrão VMware
+
+HD - Dinamicamente Alocado
+    Altera de tamanho quando vai utilizando, até um certo limite pré-definido
+
+HD - Tamanho Fixo
+    Ele cria um arquivo com um determinado valor pré-definido para uso de memória da VM

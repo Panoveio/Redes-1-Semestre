@@ -1,0 +1,35 @@
+Modelo OSI - Camada de Transporte (4)
+    Firewall trabalha na camada 4
+    *A porta aparece  no final do IP após : , 192.168.0.1:489
+Responsabilidades:
+    Segmentação (dividir) de Dados e Remontagem de Segmentos
+    
+    Rastreamneto de Conversações
+
+    Identificação das Aplicações Individuais
+
+TCP vs UDP
+TCP - Confiável pois ele confirma que o usuário recebeu - Mais lento, pois manda o protocolo até que o usuário responda
+UDP - Não precisa de uma corfimação de que o usuário recebeu - Mais rápido, pois só manda uma vez
+
+FTP - File Transfer Protocol (TCP)
+TSTP - Trivial Dile Transfer Protocol (UDP)
+
+Portas [TCP/UDP] - (0 - 65535)
+    Conhecidas - IANA (0 - 1023) - Portas de serviços de Redes
+        FTP - 21
+        SSH - 22
+        SMTP - 25 [ENVIO DE E-MAIL] (Não usado mais por causa da segurança, não tem criptografia (usado para spam))
+        DNS - 53
+        DHCP - 67
+        HTTP - 80
+        SMTPS - 465 [Nova para envio de e-mail] (Esta porta contém criptografia)
+
+    Registradas - Empresas (1024 - 49151)
+
+    Dinâmicas, Privadas ou Efêmeras- (49152 - 65535)
+        Portas geradas pelo sistema operacional do cliente para acessar a rede externa (Internet).
+    
+
+TRIPLE HAND-SHAKE - Aperto de Mão Triplo [TCP]
+    ACK - Acknowledge (Reconhecer)

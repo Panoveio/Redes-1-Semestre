@@ -1,0 +1,42 @@
+enable
+conf t
+banner mo "ACESSO AUTORIZADO APENAS PARA O DEPARTAMENTO DE TI DA COLONIA MARCIANA!"
+hostname SW-INDUSTRIAL
+service pass
+vlan 10
+name CONTROLE
+vlan 20 
+name ESTUFA
+vlan 30 
+name INDUSTRIAL
+vlan 40 
+name TERRA
+vlan 50
+name SERVIDORES
+vlan 60
+name GERENCIAMENTO
+int range f0/1-2
+switchport mode access
+switchport access vlan 30
+int range f0/21-24
+switchport mode trunk
+switchport trunk native vlan 99
+switchport trunk allowed vlan 10,20,30,40,50,60,99
+exit
+ip domain-name coloniamarciana.local
+crypto key generate rsa general-key modulus 1024
+username suporte-marte privilege 15 secret suporte@123
+line vty 0 15
+transport input ssh
+login local
+line console 0
+login local
+interface vlan 60
+ip add 192.168.0.235 255.255.255.240
+no shutdown
+exit
+enable secret SenhaMarciana7702
+line console 0
+password TI*Marte2077
+login local
+do wr

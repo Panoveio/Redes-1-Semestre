@@ -1,0 +1,56 @@
+Explicação do Passo-a-Passo
+
+
+Root - ADM do OS
+
+Método de Particionamento do Disco
+Linux precisa de no minimo duas divisões
+
+1° SWAP - Espaço para o sistema usar quando ficar sem memória RAM
+		Todo sistema Linux tem que ter um SWAP
+2° /	- Espaço onde tudo fica armazenado (Disco C)
+		Todo sistema Linux tem que ter um /
+
+sda - SolidDiskA ou SATADiskA (HD)
+
+Partição
+Primária
+Um HD só pode ter 4 partições primárias
+
+Lógica ou extendida
+A partição 4 pode ser dividida em quantos partições lógicas 
+eu quiser desde de que não ultrapasse o limite dela.
+
+O Windows só pode ser instalado em uma partição primária.
+
+Já o Linux permite colocar ele na partição lógica.
+Linux normalmente usa a partição lógica.
+
+Tecnologia de partições
+MBR - 04 partições primárias - antiga
+GPT - 128 patições primárias - nova
+Essa tecnologia está localizada na Placa-Mãe
+
+Sistema de Arquivo (HD - PENDRIVE - CARTÃO DE MEMÓRIA)
+Como os arquivos serão organizados
+
+Windows
+	FAT32 [Windows 98] [Msd, Pendrive] - Permite apenas arquivos com até 4 GB, mesmo que o pendrive tenha 16 GB de armazenamento
+	exFAT - Att do FAT32 - tem uma limitação muito maior que o FAT32
+	NTFS [Windows] - 16 EB
+
+Linux
+	ext2
+	ext3
+	ext4 [PADRÃO]
+	btrf
+
+Para a instalação do OS Linux usa-se o ext4
+
+GRUB é o iniciaçizador do Linux
+
+Senha Root: utopi*00
+
+login: gabriel
+senha: 123@456
+

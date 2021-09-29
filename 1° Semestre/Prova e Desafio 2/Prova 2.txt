@@ -1,0 +1,21 @@
+!Autor: Gabriel da Silva Quintans
+
+!Script da segunda prova, onde se deve configurar os switches da maneira correta
+!Na parte de hostname tem os seguintes nomes SW-(CORE, TERRA, INSDUSTRIAL, ESTUFA e CONTROLE)
+
+!Entra no enable
+en
+!entra no modo de configuração
+conf t
+!Coloca um nome no switch
+host SW-TERRA
+!Define uma mensagem inicial, que será lida ao acessar o switch
+ban mo "Apenas os funcionários do Departamento de TI da M.T.R.E podem acessar esse dispositivo!"
+!Definição da senha do modo enable
+ena se Senha*3n4bl3
+!Criptografia a senha console
+ser pass
+!Define a senha console
+li co 0
+pass Senha*c0n50l3
+login
