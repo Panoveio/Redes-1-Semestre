@@ -1,0 +1,39 @@
+PCs-CONTs
+IPv4 - 192.168.0.10 ou .11
+Mask - .128
+Gateway - .1
+dns - .218
+IPv6 - 2001:db8:cafe:1::a ou 2001:db8:cafe:1::b
+link - fe80::a ou fe80::b
+gateway - fe80::1
+dns - 2001:db8:cafe:5::a
+
+PCs-ESTs
+IPv4 - 192.168.0.138 ou .139
+Mask - .224
+Gateway - .129
+dns - .218
+IPv6 - 2001:db8:cafe:2::a ou 2001:db8:cafe:2::b
+link - fe80::a ou fe80::b
+gateway - fe80::1
+dns - 2001:db8:cafe:5::a
+
+PCs-INDs
+IPv4 - 192.168.0.170 ou .171
+Mask - .224
+Gateway - .161
+dns - .218
+IPv6 - 2001:db8:cafe:3::a ou 2001:db8:cafe:3::b
+link - fe80::a ou fe80::b
+gateway - fe80::1
+dns - 2001:db8:cafe:5::a
+
+PCs-TERs
+IPv4 - 192.168.0.202 ou .203
+Mask - .240
+Gateway - .193
+dns - .218
+IPv6 - 2001:db8:cafe:4::a ou 2001:db8:cafe:4::b
+link - fe80::a ou fe80::b
+gateway - fe80::1
+dns - 2001:db8:cafe:5::a
